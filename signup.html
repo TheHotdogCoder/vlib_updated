@@ -12,6 +12,20 @@
     <!-- FontAwesome icons -->
     <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
     <style>
+        @media (max-width: 523px) {
+            #signupContainer h1 {
+                font-size: calc(2em - 20%);
+            }
+
+            label {
+                font-size: calc(1em) !important;
+            }
+
+            button#submitButton {
+                font-size: calc(1em);
+            }
+        }
+
         body {
             height: 100vh;
             display: flex;
@@ -34,7 +48,6 @@
             flex-direction: column;
             align-items: center;
 
-            width: 30vw;
             padding: 30px;
 
             border-radius: 20px;
