@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
-  
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="index.css">
+
   <!--  axios  -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
+
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
   <title>VLib: Virtual Library</title>
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -63,12 +66,8 @@
           </div>
           <div class="chatbotFooter">
             <div class="promptBox">
-              <input
-                class="prompt"
-                type="text"
-                placeholder="Enter your questions"
-              />
-              <button onclick="send()">Send</button>
+              <input class="prompt" type="text" placeholder="Enter your questions" />
+              <button onclick="send()"><i class="fa fa-send"></i></button>
             </div>
           </div>
         </div>
@@ -79,8 +78,8 @@
   <script>
     const prompt = document.querySelector(".prompt");
     const chatbotBody = document.querySelector(".chatbotBody");
-    
-    async function send(){
+
+    async function send() {
       let element = document.createElement("div");
       element.setAttribute("class", "centerPrompt");
       element.innerHTML = `<div class="userPrompt"><p>${prompt.value}</p></div>`;
@@ -89,26 +88,27 @@
       await handlePrompt();
       prompt.value = "";
     }
-    
-    function handlePrompt(){
+
+    function handlePrompt() {
       let responseContainer = document.createElement("div");
       responseContainer.setAttribute("class", "chatContent");
-      
-      axios.post("https://codebuddyserver2.onrender.com/vlib", {"prompt": prompt.value})
-      .then(data => {
-        responseContainer.innerHTML = `<pre>${data.data.msg}</pre>`;
-        chatbotBody.appendChild(responseContainer)
-        console.log(data.data.msg)
-        scrollBottom()
-      })
-      .catch(err => {
-        console.log(err)
-      })
+
+      axios.post("https://codebuddyserver2.onrender.com/vlib", { "prompt": prompt.value })
+        .then(data => {
+          responseContainer.innerHTML = `<pre>${data.data.msg}</pre>`;
+          chatbotBody.appendChild(responseContainer)
+          console.log(data.data.msg)
+          scrollBottom()
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
-    
-    function scrollBottom(){
+
+    function scrollBottom() {
       chatbotBody.scrollTop = chatbotBody.scrollHeight
     }
   </script>
 </body>
+
 </html>

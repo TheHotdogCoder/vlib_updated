@@ -21,6 +21,211 @@ body {
   background: var(--fa);
 }
 
+@media (max-width: 871px) {
+
+  /* Header Rescale */
+  .header h1 {
+    font-size: calc(2em - 60%);
+  }
+
+  .header h3 {
+    font-size: calc(1em - 10%);
+  }
+}
+
+@media (max-width: 733px) {
+
+  /* Disable Expanding Nav. Bar */
+  div.toggleMenuBtn {
+    display: none !important;
+  }
+
+  .navigation {
+    grid-template-columns: 55px 1fr !important;
+  }
+}
+
+@media (max-width: 645px) {
+
+  /* Header Rescale */
+  .header h1 {
+    font-size: calc(2em - 95%);
+  }
+
+  .header h3 {
+    font-size: calc(1em - 20%);
+  }
+
+  .header img {
+    width: 45px !important;
+  }
+
+  /* Documents */
+  .documents h1 {
+    font-size: calc(2em - 25%);
+  }
+
+  .documents p.resTitle {
+    font-size: calc(1em + 25%);
+  }
+
+  /* Research Paper View */
+
+  .inputComment {
+    width: 100%;
+  }
+}
+
+@media (max-width: 523px) {
+
+  .contents {
+    padding: 50px 20px !important;
+  }
+
+  /* Header Resize */
+  .header {
+    padding: 5px 15px !important;
+  }
+
+  .header h1 {
+    font-size: calc(1em - 10%);
+  }
+
+  .header h3 {
+    font-size: calc(1em - 30%);
+  }
+
+  .header img {
+    width: 35px !important;
+  }
+
+  /* Search Bar Resize */
+  .searchbar button,
+  input#searchBar {
+    padding: 5px 10px !important;
+    font-size: calc(1em - 10%);
+  }
+
+  input#searchBar {
+    width: calc(284px - 20vw);
+  }
+
+  /* Documents */
+  .documents h1 {
+    font-size: calc(2em - 70%);
+  }
+
+  .documents p.resTitle {
+    font-size: calc(1em);
+  }
+
+  /* Research Paper View */
+
+  .paperImage {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Header Resize */
+
+  .header h1 {
+    font-size: calc(1em - 20%);
+  }
+
+  .header h3 {
+    font-size: calc(1em - 50%);
+  }
+
+  div.infos {
+    gap: 7px !important;
+  }
+
+  .header img {
+    width: 30px !important;
+  }
+
+  /* Navbar Resize */
+  .navigation {
+    grid-template-columns: 40px 1fr !important;
+  }
+
+  .navigation li {
+    padding: 6px !important;
+  }
+
+  .navigation li i {
+    scale: 75%;
+  }
+
+  /* Search Bar Resize */
+
+  input#searchBar {
+    width: calc(284px - 25vw);
+  }
+
+  /* Documents */
+  .documents h1 {
+    font-size: calc(2em - 70%);
+  }
+
+  /* Research Paper View */
+  .viewResPaper h2 {
+    font-size: calc(2rem - 90%) !important;
+  }
+
+  .descriptions p {
+    font-size: calc(1rem - 10%);
+  }
+
+  /* Chatbot */
+  .chatbot h1 {
+    font-size: calc(2em - 50%);
+  }
+
+  .chatContent pre, .chatContent p, .userPrompt p, input.prompt {
+    font-size: calc(1em - 20%) !important;
+  }
+}
+
+@media (max-width: 370px) {
+  /* Header Resize */
+
+  .header h1 {
+    font-size: calc(1em - 40%);
+  }
+
+  .header h3 {
+    font-size: calc(1em - 50%);
+  }
+
+  div.infos {
+    gap: 7px !important;
+  }
+
+  .header img {
+    width: 25px !important;
+  }
+
+  /* Navbar Resize */
+  .navigation {
+    grid-template-columns: 35px 1fr !important;
+  }
+
+  .navigation li {
+    padding: 5px !important;
+  }
+
+  /* Documents */
+  div.resPaper {
+    width: 95%;
+  }
+
+  .documents p.resTitle {
+    font-size: calc(1em - 10%);
+  }
+}
+
 /* Login design*/
 
 .login {
@@ -215,7 +420,7 @@ body {
 .contents {
   height: 90vh;
   padding: 50px;
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 .headName {
@@ -254,7 +459,7 @@ body {
 }
 
 .documents {
-  width: 100%;
+  width: 105%;
   padding: 25px 10px;
 }
 
@@ -263,14 +468,14 @@ body {
 }
 
 .docs {
-  padding: 5px 0px;
+  /* padding: 5px 0px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
   gap: 30px;
 }
 
 .docs .resPaper {
-  padding: 25px;
+  padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -348,6 +553,7 @@ body {
 }
 
 .downloadRead {
+  padding-top: 20px;
   width: 100%;
   display: flex;
   gap: 10px;
@@ -484,6 +690,11 @@ body {
   background: #f0f0f0;
 }
 
+.chatContent {
+  display: flex;
+  width: 100% !important;
+}
+
 .chatContent pre {
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -508,7 +719,7 @@ body {
 .promptBox {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: 1fr 50px;
   gap: 10px;
 }
 
@@ -522,6 +733,7 @@ body {
 }
 
 .chatbotFooter button {
+  width: 50px;
   color: #fff;
   font-size: 21px;
   border: 0;
