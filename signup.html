@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLib</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            overflow-y: hidden;
+
+            font-family: "Roboto", sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        #signupContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 30vw;
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background-color: var(--c2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .inputField {
+            display: flex;
+            width: 100%;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 50%;
+            margin: 4px 0;
+
+            border: 2px solid grey;
+            border-radius: 10px;
+
+            font-size: 1.3rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), inset 0 4px 8px 0 rgba(0, 0, 0, 0.1), inset 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin: 10px 10px;
+            padding: 10px 20px;
+
+            font-size: 1.3rem;
+
+            background-color: var(--c1);
+
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        input:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5), inset 0 4px 8px 0 rgba(0, 0, 0, 0.1), inset 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .nullAlert {
+            margin: 0px;
+
+            font-size: 0.9rem;
+            color: darkred;
+
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+        }
+
+        .inputFieldAlert {
+            display: none;
+            width: 100%;
+
+            justify-content: end;
+        }
+
+        .header {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="schoolHeader">
+            <img src="images/logo.png" alt="logo">
+            <h1>Pasig City Science High School</h1>
+        </div>
+        <div class="infos">
+            <h3>About us</h3>
+            <h3>Contact</h3>
+        </div>
+    </div>
+
+    <div id="signupContainer">
+        <h1>Sign Up</h1>
+        <div class="inputField" id="fieldUser">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+        <div class="inputFieldAlert" id="usernameAlert">
+            <p class="nullAlert">Field is Empty</p>
+        </div>
+
+        <div class="inputField" id="fieldPW">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="inputFieldAlert" id="passwordAlert">
+            <p class="nullAlert">Field is Empty</p>
+        </div>
+
+        <div class="inputField" id="fieldEmail">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="inputFieldAlert" id="emailAlert">
+            <p class="nullAlert" id="emailAlertText">Field is Empty</p>
+        </div>
+
+        <div class="inputField" id="fieldFN">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div class="inputFieldAlert" id="firstNameAlert">
+            <p class="nullAlert">Field is Empty</p>
+        </div>
+
+        <div class="inputField" id="fieldLN">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+
+        <div class="inputFieldAlert" id="lastNameAlert">
+            <p class="nullAlert">Field is Empty</p>
+        </div>
+
+        <div class="inputField" id="fieldMI">
+            <label for="middleInit">Middle Initial</label>
+            <input type="text" id="middleInit" name="middleInit" maxlength="1">
+        </div>
+
+        <div class="inputFieldAlert" id="middleInitAlert">
+            <p class="nullAlert">Field is Empty</p>
+        </div>
+
+        <button id="submitButton" onclick="checkFields()">Sign Up</button>
+    </div>
+</body>
+<script src="/index.js"></script>
+<script>
+    function checkFields() {
+        let checkCount = 0
+
+        let fieldUser = document.querySelector('#username').value
+        let fieldUserAlert = document.querySelector('#usernameAlert')
+        if (fieldUser == "") {
+            fieldUserAlert.style.display = "flex"
+        } else {
+            fieldUserAlert.style.display = "none"
+            checkCount++
+        }
+
+        let fieldPW = document.querySelector('#password').value
+        let fieldPWAlert = document.querySelector('#passwordAlert')
+        if (fieldPW == "") {
+            fieldPWAlert.style.display = "flex"
+        } else {
+            fieldPWAlert.style.display = "none"
+            checkCount++
+        }
+
+        let fieldEmail = document.querySelector('#email').value
+        let fieldEmailAlert = document.querySelector('#emailAlert')
+        let fieldEmailAlertText = document.querySelector('#emailAlertText')
+        if (fieldEmail == "") {
+            fieldEmailAlertText.innerHTML = "Field is Empty"
+            fieldEmailAlert.style.display = "flex"
+        } else if (fieldEmail.indexOf('@') == -1) {
+            fieldEmailAlertText.innerHTML = "Invalid Email"
+            fieldEmailAlert.style.display = "flex"
+        } else {
+            fieldEmailAlert.style.display = "none"
+            checkCount++
+        }
+
+        let fieldFN = document.querySelector('#firstName').value
+        let fieldFNAlert = document.querySelector('#firstNameAlert')
+        if (fieldFN == "") {
+            fieldFNAlert.style.display = "flex"
+        } else {
+            fieldFNAlert.style.display = "none"
+            checkCount++
+        }
+
+        let fieldLN = document.querySelector('#lastName').value
+        let fieldLNAlert = document.querySelector('#lastNameAlert')
+        if (fieldLN == "") {
+            fieldLNAlert.style.display = "flex"
+        } else {
+            fieldLNAlert.style.display = "none"
+            checkCount++
+        }
+
+        let fieldMI = document.querySelector('#middleInit').value
+        let fieldMIAlert = document.querySelector('#middleInitAlert')
+        if (fieldMI == "") {
+            fieldMIAlert.style.display = "flex"
+        } else {
+            fieldMIAlert.style.display = "none"
+            checkCount++
+        }
+
+        if (checkCount == 6) {
+            window.location = "/index.html"
+        }
+    }
+</script>
+
+
+</html>

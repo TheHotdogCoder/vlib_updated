@@ -1,0 +1,530 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', Sans-Serif;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --fa: #fafafa;
+  --c1: #C4DFDF;
+  --c2: #D2E9E9;
+  --c3: #E3F4F4;
+  --c4: #F8F6F4;
+
+}
+
+body {
+  background: var(--fa);
+}
+
+/* Login design*/
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.8fr 1.8fr;
+  grid-template-rows: 1fr;
+}
+
+.loginLogo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--c1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.loginLogo img {
+  width: 100%;
+  padding: 10%;
+}
+
+.loginForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.loginForm form {
+  width: 80%;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 550px;
+  padding: 50px 50px 40px;
+  background: var(--c4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loginForm h1 {
+  display: inline-block;
+  font-size: 2.5em;
+}
+
+.loginTitle {
+  width: 100%;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginTitle i {
+  margin-right: 10px;
+}
+
+.remember {
+  margin-top: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 23px;
+}
+
+.remember p {
+  padding: 10px;
+}
+
+.remember input {
+  width: 25px;
+  height: 25px;
+}
+
+.loginForm .inputs input {
+  width: 100%;
+  font-size: 23px;
+  margin-top: 10px;
+  padding: 18px;
+  background: #fafafa;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.inputField {
+  position: relative;
+}
+
+.inputField i {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-25%);
+}
+
+.loginForm button {
+  width: 100%;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 13px;
+  padding: 13px;
+  border-radius: 5px;
+  background: var(--c1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.newAccount {
+  margin-top: 30px;
+  font-size: 19px;
+}
+
+.newAccount a {
+  text-decoration: underline;
+}
+
+/* Header and left navigation bar design for all of the pages*/
+.header {
+  width: 100%;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--c1);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+.header img {
+  width: 60px;
+}
+
+.schoolHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .infos {
+  display: flex;
+  gap: 15px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s;
+}
+
+.toggleMenuBtn {
+  margin: 0px 10px;
+  border-radius: 5px;
+  padding: 7px 13px;
+  display: flex;
+  justify-content: center;
+  background: var(--c3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggleMenuBtn i {
+  font-size: 22px;
+}
+
+.navbar {
+  padding: 10px 0px;
+  background: var(--c2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.navbar a li {
+  width: 100%;
+  font-size: 23px;
+  color: #000;
+  padding: 15px 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Contents design */
+.contents {
+  height: 90vh;
+  padding: 50px;
+  overflow: auto;
+}
+
+.headName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headName h1 {
+  width: max-content;
+}
+
+.headName .searchbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.searchbar input {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.searchbar button {
+  padding: 10px 15px;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  background: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.documents {
+  width: 100%;
+  padding: 25px 10px;
+}
+
+.documents h1 {
+  padding: 10px 0px 15px;
+}
+
+.docs {
+  padding: 5px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  gap: 30px;
+}
+
+.docs .resPaper {
+  padding: 25px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.docs .resImage {
+  width: 220px;
+  height: 200px;
+  background: var(--c2);
+}
+
+.resPaper p {
+  color: #000;
+  padding: 15px 0px 8px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.norecords {
+  display: none;
+}
+
+/* View research papers design*/
+.centerViewResPaper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.viewResPaper {
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: var(--fa);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.paperHeader {
+  width: 100%;
+}
+
+.paperHeader h2 {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.paperHeader .image_descriptions {
+  width: 100%;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: minmax(100px, 225px) 1fr;
+}
+
+.image_descriptions .paperImage {
+  width: 100%;
+  min-height: 225px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--c2);
+}
+
+.image_descriptions .descriptions {
+  font-size: 20px;
+  padding: 5px 25px 3px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr max-content;
+}
+
+.downloadRead {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.downloadRead button {
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.readOnline {
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #fafafa;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.download {
+  color: #fff;
+  border: 0;
+  background: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Comment Section */
+
+.commentSection {
+  width: 100%;
+  padding: 15px 30px 20px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.commentsSort {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.commentsSort p {
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.commentsSort button {
+  border-radius: 5px;
+  padding: 0px 10px;
+  background: #f0f0f0;
+}
+
+.comments {
+  width: 100%;
+  min-height: 30px;
+  max-height: 200px;
+  border-radius: 5px;
+  margin: 7px 0px 10px;
+  overflow-y: auto;
+  scroll-margin: smooth;
+}
+
+.nocomments {
+  text-align: center;
+}
+
+.comment {
+  font-size: 18px;
+  padding: 12px 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+.sendComment {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 10px;
+}
+
+.sendComment input {
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 18px;
+  background: #fafafa;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.sendComment button {
+  color: #fff;
+  padding: 7px;
+  font-size: 19px;
+  border: 0;
+  border-radius: 5px;
+  background: #000;
+}
+
+/* Vlib Chatbot */
+
+.chatbot {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 90px;
+}
+
+.chatbotHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0px 35px;
+  background: var(--c2);
+}
+
+.chatbotBody {
+  padding: 0px 6px 25px 3px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.chatbotBody .chatContent,
+.userPrompt {
+  width: max-content;
+  max-width: 750px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  box-shadow: 0 0 1px 1.5px rgba(0, 0, 0, 0.1);
+  background: #f0f0f0;
+}
+
+.chatContent pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.centerPrompt {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chatbotFooter {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: var(--c2);
+}
+
+.promptBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 10px;
+}
+
+.chatbotFooter input {
+  width: 100%;
+  font-size: 21px;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.chatbotFooter button {
+  color: #fff;
+  font-size: 21px;
+  border: 0;
+  border-radius: 5px;
+  background: #000;
+}
