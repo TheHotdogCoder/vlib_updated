@@ -69,6 +69,10 @@ body {
     font-size: calc(1em + 25%);
   }
 
+  .contacts p.contactTitle {
+    font-size: calc(1em + 25%);
+  }
+
   /* Research Paper View */
 
   .inputComment {
@@ -116,6 +120,10 @@ body {
   }
 
   .documents p.resTitle {
+    font-size: calc(1em);
+  }
+
+  .contacts p.contactTitle {
     font-size: calc(1em);
   }
 
@@ -225,6 +233,10 @@ body {
   }
 
   .documents p.resTitle {
+    font-size: calc(1em - 10%);
+  }
+
+  .contacts p.contactTitle {
     font-size: calc(1em - 10%);
   }
 }
@@ -618,4 +630,72 @@ body {
   border: 0;
   border-radius: 5px;
   background: #000;
+}
+
+/* Contacts design */
+.contacts {
+  width: 105%;
+  padding: 25px 10px;
+}
+
+.contacts h1 {
+  padding: 10px 0px 15px;
+}
+
+.c {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  gap: 30px;
+}
+
+.contactBox {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contactImage {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background: var(--c2);
+  border-radius: 100px;
+}
+
+.contactImage i {
+  color: var(--fa);
+  font-size: 110px;
+}
+
+.contactBox p.contactTitle {
+  color: #000;
+  padding: 15px 0px 8px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contactBox p.contactDesc {
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.contactSocMed {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3px;
+}
+
+.fa-facebook-square {
+  color: darkblue;
+  font-size: 50px;
 }
