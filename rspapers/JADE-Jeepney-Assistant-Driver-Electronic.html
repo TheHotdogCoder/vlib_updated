@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
   <title>VLib: Virtual Library</title>
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -20,8 +23,8 @@
         <h1>Pasig City Science High School</h1>
       </div>
       <div class="infos">
-        <h3>About us</h3>
-        <h3>Contact</h3>
+        <h3 onclick="window.location = 'about.html'">About us</h3>
+        <h3 onclick="window.location = 'contacts.html'">Contact</h3>
       </div>
     </div>
     <div class="navigation">
@@ -81,8 +84,8 @@
                   <p>No comments yet.</p>
                 </div>
               </div>
-            <div class="sendComment">
-                <input class="inputComment"type="text" placeholder="Enter a message....">
+              <div class="sendComment">
+                <input class="inputComment" type="text" placeholder="Enter a message....">
                 <button class="sendCommentBtn">Send</button>
               </div>
             </div>
@@ -93,41 +96,42 @@
   </div>
   <script src="https://thehotdogcoder.github.io/vlib_updated/index.js"></script>
   <script>
-  // comments feature
+    // comments feature
     const comments = document.querySelector('.comments');
     const inputComment = document.querySelector('.inputComment');
     const sendCommentBtn = document.querySelector('.sendCommentBtn');
-    
+
     sendCommentBtn.onclick = () => {
-      if(inputComment.value.length > 0){
+      if (inputComment.value.length > 0) {
         //addToLocalStorage(inputComment.value);
         //let Comments = Object.values(localStorage);
         //  console.log(Comments)
-        
-          let element = document.createElement("div");
-          element.setAttribute("class", "comment");
-          element.innerHTML = inputComment.value;
-          comments.appendChild(element);
-          document.querySelector(".nocomments").style.display = "none";
+
+        let element = document.createElement("div");
+        element.setAttribute("class", "comment");
+        element.innerHTML = inputComment.value;
+        comments.appendChild(element);
+        document.querySelector(".nocomments").style.display = "none";
       }
-      
+
       inputComment.value = "";
       scrollBottom();
     }
-    
-  // local storage
-//  let count = Object.keys(localStorage).length;
-//  console.log(count);
-//  function addToLocalStorage(value){
-//    count++;
-//    localStorage.setItem(`comment${count}`, value);
-//    console.log(Object.keys(localStorage))
-//  }
 
-  // Auto Scroll
-    function scrollBottom(){
+    // local storage
+    //  let count = Object.keys(localStorage).length;
+    //  console.log(count);
+    //  function addToLocalStorage(value){
+    //    count++;
+    //    localStorage.setItem(`comment${count}`, value);
+    //    console.log(Object.keys(localStorage))
+    //  }
+
+    // Auto Scroll
+    function scrollBottom() {
       comments.scrollTop = 0;
     }
   </script>
 </body>
+
 </html>
