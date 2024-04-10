@@ -12,7 +12,7 @@ VLib is a Virtual Library Website built by Batch 17 - Cavendish Group 4 of Pasig
 ------------
 
 ### CURRENTLY WORK IN PROGRESS!!!
-####Features to be Added
+#### Features to be Added
 - Additional Research Paper Information
 - Categories
 - Autocorrect for Searching
@@ -20,11 +20,23 @@ VLib is a Virtual Library Website built by Batch 17 - Cavendish Group 4 of Pasig
 - Customizable Accounts (Profile Pictures, Bio, etc.)
 - Research Contacts Page
 
-####Currently Known Bugs
+#### Currently Known Bugs
 - Other pages in Mobile View (Viewports less than 1280px) are currently broken
 
+------------
+
+## How to access
+Due to yet this website being Work in Progress, it is still not in a formal web hosting service. To get a preview of the website:
+
+1. Download and Extract the Repository Zip File
+2. Open `index.html`
+
+It is NOT recommended to open other files such as .php files, due to security reasons.
+
+------------
+
 ## Credits & Acknowledgements
-####Batch 17 Cavendish Group 4 Members
+#### Batch 17 Cavendish Group 4 Members
 - Amiera Jam C. Atencia
 - Joam Christangel A. Odavar
 - Kathleen Anne Louisse M. Sornillo
