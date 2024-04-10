@@ -11,6 +11,27 @@
 
     <!-- FontAwesome icons -->
     <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
+    <script>
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        if (getCookie('username') == true & getCookie('password') == true) {
+            window.location = "/login.html"
+        }
+    </script>
     <style>
         @media (max-width: 523px) {
             #signupContainer h1 {
@@ -80,7 +101,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), inset 0 4px 8px 0 rgba(0, 0, 0, 0.1), inset 0 6px 20px 0 rgba(0, 0, 0, 0.1);
         }
 
-        button {
+        input#submitButton {
             margin: 10px 10px;
             padding: 10px 20px;
 
@@ -93,7 +114,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        button:hover {
+        input#submitButton:hover {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
         }
 
@@ -124,75 +145,66 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="schoolHeader">
-            <img src="https://thehotdogcoder.github.io/vlib_updated/images/logo.png" alt="logo">
-            <h1>Pasig City Science High School</h1>
-        </div>
-        <div class="infos">
-            <h3 onclick="window.location = 'about.html'">About us</h3>
-            <h3 onclick="window.location = 'contacts.html'">Contact</h3>
-        </div>
-    </div>
+    <form action="/process-signup.php" method="post" onsubmit="return checkFields()">
+        <div id="signupContainer">
+            <h1>Sign Up</h1>
+            <div class="inputField" id="fieldUser">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
 
-    <div id="signupContainer">
-        <h1>Sign Up</h1>
-        <div class="inputField" id="fieldUser">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
-        </div>
+            <div class="inputFieldAlert" id="usernameAlert">
+                <p class="nullAlert">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="usernameAlert">
-            <p class="nullAlert">Field is Empty</p>
-        </div>
+            <div class="inputField" id="fieldPW">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
 
-        <div class="inputField" id="fieldPW">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
+            <div class="inputFieldAlert" id="passwordAlert">
+                <p class="nullAlert">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="passwordAlert">
-            <p class="nullAlert">Field is Empty</p>
-        </div>
+            <div class="inputField" id="fieldEmail">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
 
-        <div class="inputField" id="fieldEmail">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-        </div>
+            <div class="inputFieldAlert" id="emailAlert">
+                <p class="nullAlert" id="emailAlertText">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="emailAlert">
-            <p class="nullAlert" id="emailAlertText">Field is Empty</p>
-        </div>
+            <div class="inputField" id="fieldFN">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
 
-        <div class="inputField" id="fieldFN">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName">
-        </div>
+            <div class="inputFieldAlert" id="firstNameAlert">
+                <p class="nullAlert">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="firstNameAlert">
-            <p class="nullAlert">Field is Empty</p>
-        </div>
+            <div class="inputField" id="fieldLN">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
 
-        <div class="inputField" id="fieldLN">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName">
-        </div>
+            <div class="inputFieldAlert" id="lastNameAlert">
+                <p class="nullAlert">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="lastNameAlert">
-            <p class="nullAlert">Field is Empty</p>
-        </div>
+            <div class="inputField" id="fieldMI">
+                <label for="middleInit">Middle Initial</label>
+                <input type="text" id="middleInit" name="middleInit" maxlength="1">
+            </div>
 
-        <div class="inputField" id="fieldMI">
-            <label for="middleInit">Middle Initial</label>
-            <input type="text" id="middleInit" name="middleInit" maxlength="1">
-        </div>
+            <div class="inputFieldAlert" id="middleInitAlert">
+                <p class="nullAlert">Field is Empty</p>
+            </div>
 
-        <div class="inputFieldAlert" id="middleInitAlert">
-            <p class="nullAlert">Field is Empty</p>
+            <input type="submit" id="submitButton">
         </div>
-
-        <button id="submitButton" onclick="checkFields()">Sign Up</button>
-    </div>
+    </form>
 </body>
 <script src="/index.js"></script>
 <script>
@@ -259,7 +271,9 @@
         }
 
         if (checkCount == 6) {
-            window.location = "https://thehotdogcoder.github.io/vlib_updated/index.html"
+            return true
+        } else {
+            return false
         }
     }
 </script>
