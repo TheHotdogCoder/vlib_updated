@@ -1,0 +1,52 @@
+Date : 2024-04-10 20:18:50
+Directory : d:\xampp\htdocs
+Total : 21 files,  2681 codes, 50 comments, 371 blanks, all 3102 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |         14 |      1,947 |         15 |        219 |      2,181 |
+| CSS        |          1 |        552 |         25 |        124 |        701 |
+| SQL        |          1 |         67 |          5 |          0 |         72 |
+| JavaScript |          2 |         63 |          1 |         14 |         78 |
+| PHP        |          2 |         51 |          4 |         13 |         68 |
+| Markdown   |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                                     |         21 |      2,681 |         50 |        371 |      3,102 |
+| . (Files)                                                                                                                                             |         12 |      1,498 |         41 |        287 |      1,826 |
+| rspapers                                                                                                                                              |          9 |      1,183 |          9 |         84 |      1,276 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                                              | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\xampp\htdocs\README.md                                                                                                                             | Markdown   |          1 |          0 |          1 |          2 |
+| d:\xampp\htdocs\VLib.session.sql                                                                                                                      | SQL        |         67 |          5 |          0 |         72 |
+| d:\xampp\htdocs\autocorrect(brokenaf).js                                                                                                              | JavaScript |         48 |          0 |         13 |         61 |
+| d:\xampp\htdocs\contacts.html                                                                                                                         | HTML       |         91 |          1 |         10 |        102 |
+| d:\xampp\htdocs\index.css                                                                                                                             | CSS        |        552 |         25 |        124 |        701 |
+| d:\xampp\htdocs\index.html                                                                                                                            | HTML       |        167 |          1 |         21 |        189 |
+| d:\xampp\htdocs\index.js                                                                                                                              | JavaScript |         15 |          1 |          1 |         17 |
+| d:\xampp\htdocs\login.html                                                                                                                            | HTML       |        176 |          1 |         41 |        218 |
+| d:\xampp\htdocs\process-login.php                                                                                                                     | PHP        |         31 |          2 |          6 |         39 |
+| d:\xampp\htdocs\process-signup.php                                                                                                                    | PHP        |         20 |          2 |          7 |         29 |
+| d:\xampp\htdocs\rspapers\Antibacterial-Activity-of-Water-Hyacinth-Leaf-Extract-Stabilized-Silver-Nanoparticles.html                                   | HTML       |        142 |          1 |         10 |        153 |
+| d:\xampp\htdocs\rspapers\Assisting-library-users-through-VLib-Virtual-Library.html                                                                    | HTML       |        126 |          1 |         10 |        137 |
+| d:\xampp\htdocs\rspapers\Crude-Extract-from-Waste-Crab-Scylla-Serrata-Shells-as-a-Constituent-to-Textile-Paint.html                                   | HTML       |        134 |          1 |         10 |        145 |
+| d:\xampp\htdocs\rspapers\Incorporating-Cymbopogon-and-Ocimum-basilicum-Extracts-in-Creating-Antimicrobial-Coating-for-Cotton-Cloth.html               | HTML       |        138 |          1 |         10 |        149 |
+| d:\xampp\htdocs\rspapers\JADE-Jeepney-Assistant-Driver-Electronic.html                                                                                | HTML       |        126 |          1 |         10 |        137 |
+| d:\xampp\htdocs\rspapers\PCSHS-EduLibrary-Digital-Catalog-Website-for-Students-and-Teachers-of-Pasig-City-Science-High-School.html                    | HTML       |        125 |          1 |          7 |        133 |
+| d:\xampp\htdocs\rspapers\Storage-Life-Extension-of-Tomato-Solanum-Lycopersium-and-Mango-Magnifera-Indica-using-UV-C-Radiation-Treatment.html          | HTML       |        125 |          1 |          7 |        133 |
+| d:\xampp\htdocs\rspapers\The-Effectiveness-of-Foliar-Application-of-Kappaphycus-Alvarezii-Guso-Crude-Solution-to-the-Growth-of-Allium-Cepa-Onion.html | HTML       |        127 |          1 |         10 |        138 |
+| d:\xampp\htdocs\rspapers\The-Utilization-of-Paper-Waste-Charcoal-in-a-Steam-Powered-Electric-Generator.html                                           | HTML       |        140 |          1 |         10 |        151 |
+| d:\xampp\htdocs\signup.html                                                                                                                           | HTML       |        228 |          1 |         53 |        282 |
+| d:\xampp\htdocs\vlibchatbot.html                                                                                                                      | HTML       |        102 |          2 |         10 |        114 |
+| Total                                                                                                                                                 |            |      2,681 |         50 |        371 |      3,102 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
