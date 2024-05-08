@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/fonts.css">
+
+  <!-- FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
+  <script src="/autocorrect.js"></script>
+  <title>VLib: Virtual Library</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="schoolHeader">
+        <img src="/images/logo.png" alt="logo">
+        <h1>V-Lib</h1>
+      </div>
+      <div class="headName">
+        <div class="searchbar">
+          <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+      <div class="infos">
+        <h3 onclick="window.location = '/about.html'">About</h3>
+        </br>
+        <h3 onclick="window.location = '/contacts.html'">Contacts</h3>
+      </div>
+    </div>
+    <div class="navigation about">
+      <div class="navbar">
+        <a href="/index.html">
+          <li>
+            <i class="fa-solid fa-home"></i>
+          </li>
+        </a>
+        <a href="/vlibchatbot.html">
+          <li>
+            <i class="fa-solid fa-robot"></i>
+          </li>
+        </a>
+      </div>
+      <div class="signupForm">
+        <form action="/process-signup.php" method="post" onsubmit="return checkFields()">
+          <div id="signupContainer">
+            <h1>Sign Up</h1>
+            <div class="inputField" id="fieldUser">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
+            </div>
+
+            <div class="inputFieldAlert" id="usernameAlert">
+              <p class="nullAlert">Field is Empty</p>
+            </div>
+
+            <div class="inputField" id="fieldPW">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password">
+            </div>
+
+            <div class="inputFieldAlert" id="passwordAlert">
+              <p class="nullAlert">Field is Empty</p>
+            </div>
+
+            <div class="inputField" id="fieldEmail">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="inputFieldAlert" id="emailAlert">
+              <p class="nullAlert" id="emailAlertText">Field is Empty</p>
+            </div>
+
+            <div class="inputField" id="fieldFN">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="inputFieldAlert" id="firstNameAlert">
+              <p class="nullAlert">Field is Empty</p>
+            </div>
+
+            <div class="inputField" id="fieldLN">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="inputFieldAlert" id="lastNameAlert">
+              <p class="nullAlert">Field is Empty</p>
+            </div>
+
+            <div class="inputField" id="fieldMI">
+              <label for="middleInit">Middle Initial</label>
+              <input type="text" id="middleInit" name="middleInit" maxlength="1">
+            </div>
+
+            <div class="inputFieldAlert" id="middleInitAlert">
+              <p class="nullAlert">Field is Empty</p>
+            </div>
+
+            <input type="submit" id="submitButton">
+          </div>
+        </form>
+      </div>
+      <div class="contentsAbout">
+        <p>Introducing V-Lib: Your Gateway to Academic ExploratiON PCSHS!
+          <br><br>
+          Welcome to V-lib, the premier destination for students embarking on their research journey! Whether you're
+          diving into the depths of a complex research project or simply seeking scholarly inspiration, V-Lib is here to
+          guide you every step of the way.
+          <br><br>
+          At V-Lib, we understand the challenges students face when it comes to finding reliable research papers. With a
+          vast sea of information available online, navigating through the waves of data can be daunting. That's where
+          we come in. Our platform is meticulously designed to streamline your search process, ensuring that you find
+          the perfect papers to elevate your academic pursuits.
+          <br><br>
+          With a comprehensive database spanning countless disciplines and topics, V-LiB empowers students to explore a
+          wealth of scholarly resources with ease. Whether you're delving into the intricacies of quantum physics or
+          unraveling the mysteries of ancient history, our platform provides access to a treasure trove of research
+          papers curated by experts in the field.
+          <br><br>
+          But V-Lib is more than just a repository of academic articles. Our intuitive search features and advanced
+          filters enable you to pinpoint exactly what you're looking for, saving you valuable time and effort. Whether
+          you're seeking peer-reviewed journals, conference proceedings, or seminal studies, V-Lib has you covered.
+          <br><br>
+          But we don't stop there. V-Lib is committed to fostering a community of learning and collaboration. Our
+          platform allows users to engage with fellow students and experts, facilitating discussions, sharing insights,
+          and forging connections that transcend geographical boundaries.
+          <br><br>
+          So whether you're embarking on a research endeavor, writing a term paper, or simply expanding your
+          intellectual horizons, let V-Lib be your compass in the vast sea of academia. Join us today and embark on a
+          journey of discovery unlike any other.</p>
+      </div>
+    </div>
+  </div>
+  <script src="/index.js"></script>
+</body>
+
+</html>

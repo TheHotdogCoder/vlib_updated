@@ -1,17 +1,38 @@
-//  toggle menu
-const toggleIcon = document.querySelector(".toggleIcon");
-const toggleMenuBtn = document.querySelector(".toggleMenuBtn");
-const navbar = document.querySelector(".navbar");
-const navigation = document.querySelector(".navigation");
+function filterLetter(l) {
+    button = document.querySelector('#letterSort' + l)
+    const letters = document.querySelectorAll('.letterSort')
+    letters.forEach((l) => {
+        l.classList.remove("isActive")
+    })
 
-toggleMenuBtn.onclick = () => {
-  if (navbar.offsetWidth > 100) {
-    toggleIcon.classList.remove("fa-arrow-left");
-    toggleIcon.classList.add("fa-arrow-right");
-    navigation.style.gridTemplateColumns = "55px 1fr";
-  } else {
-    toggleIcon.classList.add("fa-arrow-left");
-    toggleIcon.classList.remove("fa-arrow-right");
-    navigation.style.gridTemplateColumns = "220px 1fr";
-  }
+    button.classList.add("isActive")
+
+    const resTitles = document.querySelectorAll('.resTitle');
+
+    let titleArray = [];
+
+    for (let i = 0; i < resTitles.length; i++) {
+        titleArray.push(resTitles[i].innerHTML);
+    }
+
+    for (let i = 0; i < titleArray.length; i++) {
+        if (titleArray[i].toLowerCase().startsWith(l.toLowerCase())) {
+            resTitles[i].parentElement.parentElement.style.display = "block";
+            searchResponse = true;
+        } else {
+            resTitles[i].parentElement.parentElement.style.display = "none";
+        }
+    }
+}
+
+function sortVisible() {
+    const letterFlex = document.querySelector('.sortBar')
+    const navGrid = document.querySelector('.navigation')
+    if (letterFlex.style.display == "flex") {
+        letterFlex.style.display = "none"
+        navGrid.style.gridTemplateColumns = "55px 1fr"
+    } else {
+        letterFlex.style.display = "flex"
+        navGrid.style.gridTemplateColumns = "55px 1fr 55px"
+    }
 }

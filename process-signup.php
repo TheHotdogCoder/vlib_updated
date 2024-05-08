@@ -14,12 +14,6 @@
 
     $sql = "INSERT INTO users (username, pw, email, firstName, lastName, middleInit)
     VALUES (".'"'. implode('", "',$_POST) .'"'.");";
-
-    $stmt = $conn->stmt_init();
-
-    if (! $stmt -> prepare ($sql)) {
-        die("SQL Error". $conn -> error);
-    }
     $conn -> query($sql);
 
     setcookie("username",$_POST["username"], time() + (86400 * 30), "/");

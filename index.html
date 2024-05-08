@@ -8,11 +8,12 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/fonts.css">
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
-  <script src="https://thehotdogcoder.github.io/vlib_updated/autocorrect.js"></script>
+  <script src="/autocorrect.js"></script>
   <title>VLib: Virtual Library</title>
 </head>
 
@@ -20,70 +21,58 @@
   <div class="container">
     <div class="header">
       <div class="schoolHeader">
-        <img src="https://thehotdogcoder.github.io/vlib_updated/images/logo.png" alt="logo">
-        <h1>Pasig City Science High School</h1>
+        <img src="/images/logo.png" alt="logo">
+        <h1>V-Lib</h1>
+      </div>
+      <div class="headName">
+        <div class="searchbar">
+          <i class="fa fa-search"></i>
+          <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
+          <i class="fa fa-microphosne"></i>
+        </div>
       </div>
       <div class="infos">
-        <h3 onclick="window.location = 'about.html'">About us</h3>
-        <h3 onclick="window.location = 'contact.html'">Contact</h3>
+        <h3 onclick="window.location = '/about.html'">About &</br>Contacts</h3>
+        <img src="/images/books.png">
+      </div>
+    </div>
+    <div class="categoryHeader">
+      <div class="categoryBox">
+        Life Science (21)
+      </div>
+      <div class="categoryBox">
+        Applied Science (21)
+      </div>
+      <div class="categoryBox">
+        Physical Science (21)
+      </div>
+      <div class="categoryBox sortLetter" onclick="sortVisible()">
+        <p id="letterSortdd">a - z</p>
       </div>
     </div>
     <div class="navigation">
       <div class="navbar">
-        <div class="toggleMenuBtn">
-          <i class="fa-solid fa-arrow-right toggleIcon"></i>
-        </div>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/index.html">
+        <a href="/index.html">
           <li>
             <i class="fa-solid fa-home"></i>
-            <p>Home</p>
           </li>
         </a>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/vlibchatbot.html">
+        <a href="/vlibchatbot.html">
           <li>
-            <i class="fa-brands fa-rocketchat"></i>
-            <p>Assistant</p>
-          </li>
-        </a>
-        <a href="/signup.html">
-          <li>
-            <i class="fa fa-user"></i>
-            <p>Account</p>
+            <i class="fa-solid fa-robot"></i>
           </li>
         </a>
       </div>
       <div class="contents">
-        <div class="headName">
-          <div class="searchbar">
-            <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
-            <button><i class="fa fa-search"></i></button>
-          </div>
-        </div>
         <div class="documents">
-          <h1>Grade 9 Research Papers</h1>
+          <h1>Suggested For You</h1>
           <div class="docs">
             <div class="norecords">
               <p>No records found.</p>
             </div>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/Assisting-library-users-through-VLib-Virtual-Library.html">
-              <div class="resPaper">
-                <div class="resImage"></div>
-                <p class="resTitle">Assisting library users through VLib - Virtual Library</p>
-              </div>
-            </a>
-
-            <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/JADE-Jeepney-Assistant-Driver-Electronic.html">
-              <div class="resPaper">
-                <div class="resImage"></div>
-                <p class="resTitle">J.A.D.E - Jeepney Assistant Driver Electronic</p>
-              </div>
-            </a>
-
-            <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/Antibacterial-Activity-of-Water-Hyacinth-Leaf-Extract-Stabilized-Silver-Nanoparticles.html">
+              href="/rspapers/Antibacterial-Activity-of-Water-Hyacinth-Leaf-Extract-Stabilized-Silver-Nanoparticles.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">Anti-Bacterial Activity of Water Hyacinth Leaf Extract-Stabilized Silver
@@ -92,7 +81,7 @@
             </a>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/Crude-Extract-from-Waste-Crab-Scylla-Serrata-Shells-as-a-Constituent-to-Textile-Paint.html">
+              href="/rspapers/Crude-Extract-from-Waste-Crab-Scylla-Serrata-Shells-as-a-Constituent-to-Textile-Paint.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">Crude Extract from Waste Crab (Scylla Serrata) Shells as a Constituent to Textile
@@ -101,7 +90,7 @@
             </a>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/Incorporating-Cymbopogon-and-Ocimum-basilicum-Extracts-in-Creating-Antimicrobial-Coating-for-Cotton-Cloth.html">
+              href="/rspapers/Incorporating-Cymbopogon-and-Ocimum-basilicum-Extracts-in-Creating-Antimicrobial-Coating-for-Cotton-Cloth.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">Incorporating Cymbopogon and Ocimum Basilicum Extracts in Creating Anti-Microbial
@@ -110,7 +99,7 @@
             </a>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/PCSHS-EduLibrary-Digital-Catalog-Website-for-Students-and-Teachers-of-Pasig-City-Science-High-School.html">
+              href="/rspapers/PCSHS-EduLibrary-Digital-Catalog-Website-for-Students-and-Teachers-of-Pasig-City-Science-High-School.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">PCSHS EduLibrary: Digital Catalog Website for Students and Teachers of Pasig City
@@ -119,7 +108,7 @@
             </a>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/Storage-Life-Extension-of-Tomato-Solanum-Lycopersium-and-Mango-Magnifera-Indica-using-UV-C-Radiation-Treatment.html">
+              href="/rspapers/Storage-Life-Extension-of-Tomato-Solanum-Lycopersium-and-Mango-Magnifera-Indica-using-UV-C-Radiation-Treatment.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">Storage Life Extension of Tomato (Solanum Lycopersium) and Mango (Magnifera Indica)
@@ -128,7 +117,7 @@
             </a>
 
             <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/The-Effectiveness-of-Foliar-Application-of-Kappaphycus-Alvarezii-Guso-Crude-Solution-to-the-Growth-of-Allium-Cepa-Onion.html">
+              href="/rspapers/The-Effectiveness-of-Foliar-Application-of-Kappaphycus-Alvarezii-Guso-Crude-Solution-to-the-Growth-of-Allium-Cepa-Onion.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">The Effectiveness of Foliar Application of Kappaphycus Alvarezii (Guso) Crude
@@ -136,19 +125,59 @@
               </div>
             </a>
 
-            <a
-              href="https://thehotdogcoder.github.io/vlib_updated/rspapers/The-Utilization-of-Paper-Waste-Charcoal-in-a-Steam-Powered-Electric-Generator.html">
+            <a href="/rspapers/The-Utilization-of-Paper-Waste-Charcoal-in-a-Steam-Powered-Electric-Generator.html">
               <div class="resPaper">
                 <div class="resImage"></div>
                 <p class="resTitle">The Utilization of Paper Waste Charcoal in a Steam Powered Electric Generator</p>
               </div>
             </a>
+
+            <a href="/rspapers/Assisting-library-users-through-VLib-Virtual-Library.html">
+              <div class="resPaper">
+                <div class="resImage"></div>
+                <p class="resTitle">Assisting library users through VLib - Virtual Library</p>
+              </div>
+            </a>
+            <a href="/rspapers/JADE-Jeepney-Assistant-Driver-Electronic.html">
+              <div class="resPaper">
+                <div class="resImage"></div>
+                <p class="resTitle">J.A.D.E - Jeepney Assistant Driver Electronic</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
+      <div class="sortBar">
+        <p id="letterSortA" class="letterSort" onclick="filterLetter('A')">a</p>
+        <p id="letterSortB" class="letterSort" onclick="filterLetter('B')">b</p>
+        <p id="letterSortC" class="letterSort" onclick="filterLetter('C')">c</p>
+        <p id="letterSortD" class="letterSort" onclick="filterLetter('D')">d</p>
+        <p id="letterSortE" class="letterSort" onclick="filterLetter('E')">e</p>
+        <p id="letterSortF" class="letterSort" onclick="filterLetter('F')">f</p>
+        <p id="letterSortG" class="letterSort" onclick="filterLetter('G')">g</p>
+        <p id="letterSortH" class="letterSort" onclick="filterLetter('H')">h</p>
+        <p id="letterSortI" class="letterSort" onclick="filterLetter('I')">i</p>
+        <p id="letterSortJ" class="letterSort" onclick="filterLetter('J')">j</p>
+        <p id="letterSortK" class="letterSort" onclick="filterLetter('K')">k</p>
+        <p id="letterSortL" class="letterSort" onclick="filterLetter('L')">l</p>
+        <p id="letterSortM" class="letterSort" onclick="filterLetter('M')">m</p>
+        <p id="letterSortN" class="letterSort" onclick="filterLetter('N')">n</p>
+        <p id="letterSortO" class="letterSort" onclick="filterLetter('O')">o</p>
+        <p id="letterSortP" class="letterSort" onclick="filterLetter('P')">p</p>
+        <p id="letterSortQ" class="letterSort" onclick="filterLetter('Q')">q</p>
+        <p id="letterSortR" class="letterSort" onclick="filterLetter('R')">r</p>
+        <p id="letterSortS" class="letterSort" onclick="filterLetter('S')">s</p>
+        <p id="letterSortT" class="letterSort" onclick="filterLetter('T')">t</p>
+        <p id="letterSortU" class="letterSort" onclick="filterLetter('U')">u</p>
+        <p id="letterSortV" class="letterSort" onclick="filterLetter('V')">v</p>
+        <p id="letterSortW" class="letterSort" onclick="filterLetter('W')">w</p>
+        <p id="letterSortX" class="letterSort" onclick="filterLetter('X')">x</p>
+        <p id="letterSortY" class="letterSort" onclick="filterLetter('Y')">y</p>
+        <p id="letterSortZ" class="letterSort" onclick="filterLetter('Z')">z</p>
+      </div>
     </div>
   </div>
-  <script src="https://thehotdogcoder.github.io/vlib_updated/index.js"></script>
+  <script src="/index.js"></script>
   <script>
     // Search feature
     const resTitles = document.querySelectorAll('.resTitle');
@@ -183,6 +212,9 @@
         norecords.style.display = "none";
       }
     }
+
+    // Category Filter
+    var xhttp = new XMLHttpRequest()
   </script>
 </body>
 

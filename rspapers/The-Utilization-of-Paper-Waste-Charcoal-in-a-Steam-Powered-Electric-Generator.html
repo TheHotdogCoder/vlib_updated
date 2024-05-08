@@ -8,7 +8,8 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/fonts.css">
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
@@ -19,35 +20,31 @@
   <div class="container">
     <div class="header">
       <div class="schoolHeader">
-        <img src="https://thehotdogcoder.github.io/vlib_updated/images/logo.png" alt="logo">
-        <h1>Pasig City Science High School</h1>
+        <img src="/images/logo.png" alt="logo">
+        <h1>V-Lib</h1>
+      </div>
+      <div class="headName">
+        <div class="searchbar">
+          <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
       </div>
       <div class="infos">
-        <h3 onclick="window.location = 'about.html'">About us</h3>
-        <h3 onclick="window.location = 'contacts.html'">Contact</h3>
+        <h3 onclick="window.location = '/about.html'">About</h3>
+        </br>
+        <h3 onclick="window.location = '/contacts.html'">Contacts</h3>
       </div>
     </div>
     <div class="navigation">
       <div class="navbar">
-        <div class="toggleMenuBtn">
-          <i class="fa-solid fa-arrow-right toggleIcon"></i>
-        </div>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/index.html">
+        <a href="/index.html">
           <li>
             <i class="fa-solid fa-home"></i>
-            <p>Home</p>
           </li>
         </a>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/vlibchatbot.html">
+        <a href="/vlibchatbot.html">
           <li>
-            <i class="fa-brands fa-rocketchat"></i>
-            <p>Assistant</p>
-          </li>
-        </a>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/signup.html">
-          <li>
-            <i class="fa fa-user"></i>
-            <p>Account</p>
+            <i class="fa-solid fa-robot"></i>
           </li>
         </a>
       </div>
@@ -108,7 +105,7 @@
       </div>
     </div>
   </div>
-  <script src="https://thehotdogcoder.github.io/vlib_updated/index.js"></script>
+  <script src="/index.js"></script>
   <script>
     // comments feature
     const comments = document.querySelector('.comments');

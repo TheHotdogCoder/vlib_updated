@@ -16,11 +16,6 @@ CREATE TABLE rspapers (
     viewCount int
 );
 --@block
-SELECT *
-FROM users;
---@block
-TRUNCATE TABLE users;
---@block
 UPDATE rspapers
 SET viewCount = 0,
     imgref = '';

@@ -8,7 +8,8 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/fonts.css">
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
@@ -19,35 +20,31 @@
   <div class="container">
     <div class="header">
       <div class="schoolHeader">
-        <img src="https://thehotdogcoder.github.io/vlib_updated/images/logo.png" alt="logo">
-        <h1>Pasig City Science High School</h1>
+        <img src="/images/logo.png" alt="logo">
+        <h1>V-Lib</h1>
+      </div>
+      <div class="headName">
+        <div class="searchbar">
+          <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
       </div>
       <div class="infos">
-        <h3 onclick="window.location = 'about.html'">About us</h3>
-        <h3 onclick="window.location = 'contacts.html'">Contact</h3>
+        <h3 onclick="window.location = '/about.html'">About</h3>
+        </br>
+        <h3 onclick="window.location = '/contacts.html'">Contacts</h3>
       </div>
     </div>
     <div class="navigation">
       <div class="navbar">
-        <div class="toggleMenuBtn">
-          <i class="fa-solid fa-arrow-right toggleIcon"></i>
-        </div>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/index.html">
+        <a href="/index.html">
           <li>
             <i class="fa-solid fa-home"></i>
-            <p>Home</p>
           </li>
         </a>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/vlibchatbot.html">
+        <a href="/vlibchatbot.html">
           <li>
-            <i class="fa-brands fa-rocketchat"></i>
-            <p>Assistant</p>
-          </li>
-        </a>
-        <a href="https://thehotdogcoder.github.io/vlib_updated/signup.html">
-          <li>
-            <i class="fa fa-user"></i>
-            <p>Account</p>
+            <i class="fa-solid fa-robot"></i>
           </li>
         </a>
       </div>
@@ -85,53 +82,54 @@
                 </div>
               </div>
               <div class="sendComment">
-                <input class="inputComment" type="text" placeholder="Enter a message....">
-                <button class="sendCommentBtn">Send</button>
+                <form action="<?php recordComment()?>" method="post">
+                  <input class="inputComment" type="text" placeholder="Enter a message...." name="userComment">
+                  <input type="submit" id="sendCommentBtn">
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://thehotdogcoder.github.io/vlib_updated/index.js"></script>
-  <script>
-    // comments feature
-    const comments = document.querySelector('.comments');
-    const inputComment = document.querySelector('.inputComment');
-    const sendCommentBtn = document.querySelector('.sendCommentBtn');
+    <script src="/index.js"></script>
+    <script>
+      // comments feature
+      const comments = document.querySelector('.comments');
+      const inputComment = document.querySelector('.inputComment');
+      const sendCommentBtn = document.querySelector('.sendCommentBtn');
 
-    sendCommentBtn.onclick = () => {
-      if (inputComment.value.length > 0) {
-        //addToLocalStorage(inputComment.value);
-        //let Comments = Object.values(localStorage);
-        //  console.log(Comments)
+      sendCommentBtn.onclick = () => {
+        if (inputComment.value.length > 0) {
+          //addToLocalStorage(inputComment.value);
+          //let Comments = Object.values(localStorage);
+          //  console.log(Comments)
 
-        let element = document.createElement("div");
-        element.setAttribute("class", "comment");
-        element.innerHTML = inputComment.value;
-        comments.appendChild(element);
-        document.querySelector(".nocomments").style.display = "none";
+          let element = document.createElement("div");
+          element.setAttribute("class", "comment");
+          element.innerHTML = inputComment.value;
+          comments.appendChild(element);
+          document.querySelector(".nocomments").style.display = "none";
+        }
+
+        inputComment.value = "";
+        scrollBottom();
       }
 
-      inputComment.value = "";
-      scrollBottom();
-    }
+      // local storage
+      //  let count = Object.keys(localStorage).length;
+      //  console.log(count);
+      //  function addToLocalStorage(value){
+      //    count++;
+      //    localStorage.setItem(`comment${count}`, value);
+      //    console.log(Object.keys(localStorage))
+      //  }
 
-    // local storage
-    //  let count = Object.keys(localStorage).length;
-    //  console.log(count);
-    //  function addToLocalStorage(value){
-    //    count++;
-    //    localStorage.setItem(`comment${count}`, value);
-    //    console.log(Object.keys(localStorage))
-    //  }
-
-    // Auto Scroll
-    function scrollBottom() {
-      comments.scrollTop = 0;
-    }
-  </script>
+      // Auto Scroll
+      function scrollBottom() {
+        comments.scrollTop = 0;
+      }
+    </script>
 </body>
 
 </html>

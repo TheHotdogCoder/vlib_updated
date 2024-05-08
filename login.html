@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VLib</title>
-    <link rel="stylesheet" href="https://thehotdogcoder.github.io/vlib_updated/index.css">
+    <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
 
@@ -21,15 +21,16 @@
                 while (c.charAt(0) == ' ') {
                     c = c.substring(1);
                 }
-                if (c.indexOf(name) == 0) {;
-                    return c.substring(name.length, c.length);
+                if (c.indexOf(name) == 0) {
+                    return true;
                 }
             }
             return false;
         }
-        // if (getCookie('username') == true & getCookie('password') == true) {
-        //     window.location = "/index.html"
-        // }
+
+        if (getCookie('username') == true & getCookie('password') == true) {
+            window.location = "/account.html"
+        }
     </script>
     <style>
         @media (max-width: 523px) {
@@ -176,7 +177,7 @@
         userAlert.innerHTML = "Username Not Found"
         userFieldUserAlert.style.display = "flex"
     }
-    
+
     if (getCookie('error') > 1) {
         let pwFieldUserAlert = document.querySelector('#passwordAlert')
         let pwAlert = document.getElementById('pwAlert')
