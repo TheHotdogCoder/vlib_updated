@@ -36,3 +36,12 @@ function sortVisible() {
         navGrid.style.gridTemplateColumns = "55px 1fr 55px"
     }
 }
+
+function getURLProp(identifier) {
+    const link = window.location.toString()
+    res = link.slice(link.lastIndexOf('?' + identifier + '=') + 4, link.lastIndexOf('?' + identifier + '=') + 5)
+    if ((/^\d+$/).test(res) == false) {
+        res = 'NaN'
+    }
+    return res
+}

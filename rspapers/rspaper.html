@@ -60,31 +60,16 @@
             <div class="paperHeader">
               <div class="image_descriptions">
                 <div class="descriptions">
-                  <h2>Anti-Bacterial Activity of Water Hyacinth Leaf Extract-Stabilized Silver Nanoparticles</h2>
-                  <p>Year: </p>
-                  <p>Keywords: </p>
+                  <h2 class="rsTitle">Title</h2>
+                  <p class="rsYr">Year: Here</p>
+                  <p class="rsTags">Keywords: Here</p>
                   <br>
                   <h3>Abstract:</h3>
-                  <p>Water pollution caused by the spread of unwanted water hyacinth is a problem of the Philippines.
-                    Water hyacinth
-                    (Eichhornia Crassipes) is very abundant in the Philippines. Plant mediated biosynthesis
-                    of silver nanoparticles is proven to be eco-friendly and cheap. Silver nanoparticles exhibit
-                    antibacterial characteristics. The
-                    study showed that biosynthesized silver nanoparticles from water hyacinth leaf extract was due to
-                    the
-                    extract's phytochemicals that serves as reducing and capping agent-to-silver ions to make them
-                    silver nanoparticles. After color change was observed during the water bath method in synthesis that
-                    indicates silver nanoparticles, UV-Visible Spectroscopy confirmed the presence of silver
-                    nanoparticles, Particle Size Analyzer via Dynamic Light Scattering showed the size distribution, and
-                    the Fourier Transform Infrared Spectroscopy confirmed the presence of the said phytochemicals.
-                    Cultured bacteria, Escherichia coil and Staphylococcus aureus, together with the silver
-                    nanoparticles solution undergo antibacterial assay through agar well diffusion method. The silver
-                    nanoparticles reduced the growth of both bacteria with zone of inhibition of 15.333 mm ± 0.577 mm
-                    and 15.667 mm ± 0.577 mm respectively. The antimicrobial activity of the biosynthesized silver
-                    nanoparticles is more significant than that of water hyacinth leaf extract</p>
+                  <p class="rsAbstract">Abstract Here</p>
                 </div>
                 <div class="paperOpt">
                   <div class="paperImage">
+                    <img src="" class="rsImage">
                   </div>
                   <div class="downloadRead">
                     <a href="/pdfviewer.html">
@@ -114,7 +99,7 @@
               </div>
               <div class="sendComment">
                 <input class="inputComment" type="text" placeholder="Enter a message....">
-                <button class="sendCommentBtn">Send</button>
+                <button class="sendCommentBtn">Send</button>x
               </div>
             </div>
           </div>
@@ -124,41 +109,15 @@
   </div>
   <script src="/index.js"></script>
   <script>
-    // comments feature
-    const comments = document.querySelector('.comments');
-    const inputComment = document.querySelector('.inputComment');
-    const sendCommentBtn = document.querySelector('.sendCommentBtn');
-
-    sendCommentBtn.onclick = () => {
-      if (inputComment.value.length > 0) {
-        //addToLocalStorage(inputComment.value);
-        //let Comments = Object.values(localStorage);
-        //  console.log(Comments)
-
-        let element = document.createElement("div");
-        element.setAttribute("class", "comment");
-        element.innerHTML = inputComment.value;
-        comments.appendChild(element);
-        document.querySelector(".nocomments").style.display = "none";
+    rsID = getURLProp('id')
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status != 200) {
+        alert('Error ' + this.status)
       }
-
-      inputComment.value = "";
-      scrollBottom();
-    }
-
-    // local storage
-    //  let count = Object.keys(localStorage).length;
-    //  console.log(count);
-    //  function addToLocalStorage(value){
-    //    count++;
-    //    localStorage.setItem(`comment${count}`, value);
-    //    console.log(Object.keys(localStorage))
-    //  }
-
-    // Auto Scroll
-    function scrollBottom() {
-      comments.scrollTop = 0;
-    }
+    };
+    xhttp.open("GET", "/getrs.php?id=" + rsID, true);
+    xhttp.send();
   </script>
 </body>
 

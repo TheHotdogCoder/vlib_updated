@@ -56,15 +56,13 @@
         </div>
         <div class="view">
           <div class="pdf">
-            <iframe src="/assets/1.pdf"></iframe>
+            <iframe src="/assets/1.pdf#toolbar=0"></iframe>
           </div>
           <div class="detailsbox">
             <div class="details">
-              <ol>
-                <li>Grade & Section:</li>
-                <p>G9 - Cavendish</p>
-              </ol>
+
             </div>
+            <button onclick="window.location = '/rspapers/rspaper.html'">Back</button>
           </div>
         </div>
       </div>
@@ -72,14 +70,7 @@
   </div>
   <script src="/index.js"></script>
   <script>
-    function getURLProp(identifier) {
-      const link = window.location.toString()
-      res = link.slice(link.lastIndexOf('?' + identifier + '=') + 4, link.lastIndexOf('?' + identifier + '=') + 5)
-      if ((/^\d+$/).test(res) == false) {
-        res = 'NaN'
-      }
-      return res
-    }
+    
   </script>
 </body>
 

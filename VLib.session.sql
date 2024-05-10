@@ -1,25 +1,18 @@
-CREATE TABLE users (
-    id int primary key auto_increment,
-    username varchar(255) not null unique,
-    pw varchar(30) not null,
-    email varchar(255) not null unique,
-    firstName varchar(255) not null,
-    lastName varchar(255) not null,
-    middleInit varchar(2) not null
-);
---@block
 CREATE TABLE rspapers (
-    id int primary key auto_increment,
-    title varchar(255) not null unique,
-    abstract text,
-    imgref text,
-    viewCount int
+    rsID INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL UNIQUE,
+    abstract TEXT,
+    imgref TEXT,
+    syear INT,
+    gsec VARCHAR(255),
+    tags TEXT
 );
---@block
-UPDATE rspapers
-SET viewCount = 0,
-    imgref = '';
---@block
+CREATE TABLE users (
+    userID INT PRIMARY KEY AUTO_INCREMENT,
+    userName VARCHAR(255) NOT NULL,
+    pw VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL UNIQUE
+);
 INSERT INTO rspapers (title, abstract)
 VALUES (
         'Assisting library users through VLib - Virtual Library',
@@ -50,10 +43,6 @@ VALUES (
         'Ultraviolet (UV)-C radiation can elicit favourable reactions in biological systems especially in fruits and vegetables. This study was conducted to assess the effect of UV-C post-harvest treatment on the nutritional and antioxidant contents of tomato and mango. The samples were irradiated with UV-C, and then subjected to nutritional and antioxidant analysis to determine the proximate composition, mineral micronutrients, ascorbic acid, total flavonoid and total phenolics using standard methods. The result showed that post harvest treatment with UV-C radiation has varying effects on the nutritional contents and antioxidant activity of tomato and mango. Total flavonoid and total phenolics were significantly increased (p &lt; 0.05) while there was a reduction in the values of ascorbic acid. This study provides evidence that the new approach of post-harvest treatment with UV radiation can enhance some health - promoting compounds of mango and tomato for the benefit of consumers.'
     ),
     (
-        'The Utilization of Paper Waste Charcoal in a Steam Powered Electric Generator',
-        ''
-    ),
-    (
         'The Effectiveness of Foliar Applications of Kappaphycus Alvarezii (Guso) Crude Solution to the Growth of Allium Cepa (Onion)',
         'Kappapychus alvarezil or commonly known as guso is a readily available algae in the Philippines, It has properties that can help a plant grow faster. This study will help to determine the effectiveness of the Kappapychus alvarezii crude solution to the Allium cepa (onion) through foliar application. The guso was first cleaned properly then blended using a portable blender. After blending, the algae were filtered out using cheesecloth to furthermore extract it. Once the extraction was finished, the extract was placed in 4 mason jars with the following concentrations: 5%, 10%, 15%, and 20%. The jars were kept in room temperature to ferment for 5 weeks. Onion seeds were planted as the researchers waited for the fermentation to finish. After the onions sprouted its first leaves, the plants were subjected to the foliar application of the crude solution. The researchers then observed the growth of the onions subjected to the foliar application and the onions that were not subjected to the foliar application'
     ),
@@ -65,3 +54,14 @@ VALUES (
         'Metal Cleaning and Rust Removal Machinery using Electrolysis and Ultrasonic Waves',
         'No Abstract'
     );
+UPDATE rspapers
+SET imgref = 'NaN';
+--@block
+DROP TABLE rspapers;
+DROP TABLE users;
+--@block
+SELECT *
+FROM rspapers;
+--@block
+ALTER TABLE rspapers
+ADD gsec VARCHAR(255);
