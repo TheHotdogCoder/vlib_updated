@@ -371,7 +371,7 @@ body {
 
 }
 
-.searchbar{
+.searchbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -379,13 +379,13 @@ body {
   padding: 10px 50px 10px 20px;
   border: 0px;
   border-radius: 30px;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .searchbar input {
   width: auto;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
   box-shadow: none;
 }
@@ -473,7 +473,9 @@ body {
   font-size: 30px;
   font-weight: 700;
 }
-.image_descriptions h2, h3 {
+
+.image_descriptions h2,
+h3 {
   font-family: 'Glacial';
 }
 
@@ -812,6 +814,51 @@ button.sendCommentBtn {
 
 .about {
   grid-template-columns: 55px 40% 1fr;
+}
+
+.majordetails {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--header-grad2);
+  border-radius: 20px;
+}
+
+.view {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  height: 80%;
+}
+
+.pdf {
+  padding: 20px;
+}
+
+.view iframe {
+  
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.view iframe document {
+  background-color: red;
+}
+
+.detailsbox {
+  padding: 20px;
+}
+
+.details {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-grad2);
+  border-radius: 20px;
+}
+
+.details li {
+  font-weight: 600;
 }
 
 @media (max-width: 523px) {

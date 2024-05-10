@@ -13,6 +13,7 @@
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
+  <script src="/autocorrect.js"></script>
   <title>VLib: Virtual Library</title>
 </head>
 
@@ -25,12 +26,14 @@
       </div>
       <div class="headName">
         <div class="searchbar">
+          <i class="fa fa-search"></i>
           <input class="searchData" id="searchBar" type="text" placeholder="Search..." onkeyup="submitAC()" />
-          <button><i class="fa fa-search"></i></button>
+          <i class="fa fa-microphosne"></i>
         </div>
       </div>
       <div class="infos">
-        <h3 onclick="window.location = 'about.html'">About &</br>Contacts</h3>
+        <h3 onclick="window.location = '/about.html'">About &</br>Contacts</h3>
+        <img src="/images/books.png">
       </div>
     </div>
     <div class="navigation">
@@ -47,41 +50,37 @@
         </a>
       </div>
       <div class="contents">
-        <style>
-
-        </style>
-        <div class="accHeader">
-          <div class="accPFP">
-            <img src="/images/yes.jpg">
-          </div>
-          <div class="acc">
-            <p class="accUser">VLiber</p>
-            <p class="accName">Joam Odavar</p>
-          </div>
+        <div class="majordetails">
+          <h1>Assessing the Anti-mitotic property of the ethanolic crude extract of Mimosa Pudica using Allium Cepa
+            Assay</h1>
         </div>
-        <div class="accDetails">
-          <div class="accBio">
-            <p class=""></p>
+        <div class="view">
+          <div class="pdf">
+            <iframe src="/assets/1.pdf"></iframe>
+          </div>
+          <div class="detailsbox">
+            <div class="details">
+              <ol>
+                <li>Grade & Section:</li>
+                <p>G9 - Cavendish</p>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
-    <script>
-      function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-        }
-        return c.substring(name.length, c.length);
+  </div>
+  <script src="/index.js"></script>
+  <script>
+    function getURLProp(identifier) {
+      const link = window.location.toString()
+      res = link.slice(link.lastIndexOf('?' + identifier + '=') + 4, link.lastIndexOf('?' + identifier + '=') + 5)
+      if ((/^\d+$/).test(res) == false) {
+        res = 'NaN'
       }
-      document.querySelector(".accUser").innerHTML = getCookie(("username"))
-    </script>
+      return res
+    }
+  </script>
 </body>
 
 </html>
