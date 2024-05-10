@@ -446,9 +446,19 @@ body {
 }
 
 /* View research papers design*/
+.loadScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadScreen img {
+  width: 80px;
+}
+
 .centerViewResPaper {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 

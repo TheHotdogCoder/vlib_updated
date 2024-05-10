@@ -21,7 +21,7 @@
   <div class="container">
     <div class="header">
       <div class="schoolHeader">
-        <img src="/images/logo.png" alt="logo">
+        <img src="/assets/images/logo.png" alt="logo">
         <h1>V-Lib</h1>
       </div>
       <div class="headName">
@@ -33,7 +33,7 @@
       </div>
       <div class="infos">
         <h3 onclick="window.location = '/about.html'">About &</br>Contacts</h3>
-        <img src="/images/books.png">
+        <img src="/assets/images/books.png">
       </div>
     </div>
     <div class="navigation">
@@ -55,6 +55,9 @@
         </a>
       </div>
       <div class="contents">
+        <div class="loadScreen">
+          <img src="/assets/assets/images/loading.gif">
+        </div>
         <div class="centerViewResPaper">
           <div class="viewResPaper">
             <div class="paperHeader">
@@ -78,7 +81,7 @@
                         Read Online
                       </button>
                     </a>
-                    <a href="/assets/1.pdf">
+                    <a href="/assets/1.pdf" download="Research Paper">
                       <button class="download">
                         <i class="fa fa-newspaper"></i>
                         Download PDF
@@ -109,15 +112,25 @@
   </div>
   <script src="/index.js"></script>
   <script>
-    rsID = getURLProp('id')
-    var xhttp = new XMLHttpRequest()
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status != 200) {
-        alert('Error ' + this.status)
-      }
-    };
-    xhttp.open("GET", "/getrs.php?id=" + rsID, true);
-    xhttp.send();
+    function getQuery() {
+      rsID = getURLProp('id')
+      var xhttp = new XMLHttpRequest()
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == XMLHttpRequest.DONE) {
+          var metaArray = xhttp.responseText.split(":::")
+          document.querySelector(".rsTitle").innerHTML = metaArray[0]
+          document.querySelector(".rsAbstract").innerHTML = metaArray[1]
+          document.querySelector(".rsImage").src = "/assets/assets/images/" + metaArray[2] + ".png"
+          document.querySelector(".rsYr").innerHTML = "Year: " + metaArray[3]
+          document.querySelector(".rsTags").innerHTML = "Keywords: " + metaArray[4]
+          document.querySelector(".centerViewResPaper").style.display = "flex";
+          document.querySelector("loadScreen").style.display = "none";
+        }
+      };
+      xhttp.open("GET", "/php/getrs.php?id=" + rsID, true);
+      xhttp.send();
+    }
+    getQuery()
   </script>
 </body>
 
