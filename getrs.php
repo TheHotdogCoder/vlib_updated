@@ -1,10 +1,10 @@
 <?php
-$mysqli = new mysqli("", "u729347526_admin", "Wally2023@", "vlib");
+$mysqli = new mysqli("srv1364.hstgr.io", "u729347526_admin", "Wally2023@", "u729347526_vlib");
 if($mysqli->connect_error) {
   echo "<script>alert('Could Not Connect')</script>";
   exit('Could not connect');
 }
-$sql = "SELECT title, abstract, imgref, syear, gsec, tags FROM rspapers WHERE id = " . $_GET['id'];
+$sql = "SELECT title, abstract, imgref, syear, gsec, tags FROM rspapers WHERE rsID = " . $_GET['id'];
 
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("s", $_GET['id']);
