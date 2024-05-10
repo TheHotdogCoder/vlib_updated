@@ -75,7 +75,7 @@
                     <img src="" class="rsImage">
                   </div>
                   <div class="downloadRead">
-                    <a href="/pdfviewer.html">
+                    <a href="/pdfviewer.html" id="viewerLink">
                       <button class="readOnline">
                         <i class="fa fa-search"></i>
                         Read Online
@@ -112,8 +112,9 @@
   </div>
   <script src="/index.js"></script>
   <script>
+    rsID = getURLProp('id')
+    document.querySelector("#viewerLink").href = "/pdfviewer.html?id=" + rsID;
     function getQuery() {
-      rsID = getURLProp('id')
       var xhttp = new XMLHttpRequest()
       xhttp.onreadystatechange = function () {
         if (xhttp.readyState == XMLHttpRequest.DONE) {

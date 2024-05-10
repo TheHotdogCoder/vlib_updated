@@ -13,7 +13,6 @@
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/17d86c0acc.js" crossorigin="anonymous"></script>
-  <script src="/autocorrect.js"></script>
   <title>VLib: Virtual Library</title>
 </head>
 
@@ -21,7 +20,7 @@
   <div class="container">
     <div class="header">
       <div class="schoolHeader">
-        <img src="/assets/assets/images/logo.png" alt="logo">
+        <img src="/assets/images/logo.png" alt="logo">
         <h1>V-Lib</h1>
       </div>
       <div class="headName">
@@ -33,7 +32,7 @@
       </div>
       <div class="infos">
         <h3 onclick="window.location = '/about.html'">About &</br>Contacts</h3>
-        <img src="/assets/assets/images/books.png">
+        <img src="/assets/images/books.png">
       </div>
     </div>
     <div class="navigation">
@@ -51,8 +50,7 @@
       </div>
       <div class="contents">
         <div class="majordetails">
-          <h1>Assessing the Anti-mitotic property of the ethanolic crude extract of Mimosa Pudica using Allium Cepa
-            Assay</h1>
+          <h1 id="rsTitle"></h1>
         </div>
         <div class="view">
           <div class="pdf">
@@ -62,7 +60,7 @@
             <div class="details">
 
             </div>
-            <button onclick="window.location = '/rspapers/rspaper.html'">Back</button>
+            <button id="backButton" onclick="redirBack()">Back</button>
           </div>
         </div>
       </div>
@@ -70,7 +68,23 @@
   </div>
   <script src="/index.js"></script>
   <script>
-    
+    rsID = getURLProp('id')
+    function redirBack() {
+      window.location = "/rspapers/rspaper.html?id=" + rsID
+    }
+    function getQuery() {
+      var xhttp = new XMLHttpRequest()
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == XMLHttpRequest.DONE) {
+          var metaArray = xhttp.responseText.split(":::")
+          document.querySelector("#rsTitle").innerHTML = metaArray[0]
+        }
+      };
+      xhttp.open("GET", "/php/getrs.php?id=" + rsID, true);
+      xhttp.send();
+    }
+    getQuery()
+    document.querySelector('iframe').src = "/assets/" + rsID + ".pdf#toolbar=0"
   </script>
 </body>
 

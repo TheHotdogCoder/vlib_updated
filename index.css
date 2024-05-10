@@ -447,7 +447,7 @@ body {
 
 /* View research papers design*/
 .loadScreen {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -458,7 +458,7 @@ body {
 
 .centerViewResPaper {
   width: 100%;
-  display: none;
+  /* display: none; */
   justify-content: center;
 }
 
