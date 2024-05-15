@@ -4,14 +4,14 @@ $mysqli = new mysqli("srv1364.hstgr.io", "u729347526_admin", "Wally2023@", "u729
 if ($mysqli->connect_error) {
   exit('Could not connect');
 }
-$sql = "SELECT title, abstract, syear, tags FROM rspapers WHERE rsID = ?";
+$sql = "SELECT id, title, tags FROM rspapers";
 
 $stmt = $mysqli->prepare($sql);
-$stmt->bind_param("s", $_GET['id']);
 $stmt->execute();
 $stmt->store_result();
-$stmt->bind_result($title, $abstract, $syear, $tags);
+$stmt->bind_result($id, $title, $tags);
 $stmt->fetch();
 $stmt->close();
-
-echo $title . ":::" . $abstract . ":::" . $syear . ":::" . $tags;
+$titleStr = implode("---", $title);
+$tagsStr = implode("@@@", $tags);
+echo $id . ":::" . $titleStr . ":::" . $tagsStr;

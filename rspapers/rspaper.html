@@ -121,7 +121,7 @@
           var metaArray = xhttp.responseText.split(":::")
           document.querySelector(".rsTitle").innerHTML = metaArray[0]
           document.querySelector(".rsAbstract").innerHTML = metaArray[1]
-          document.querySelector(".rsImage").src = "/assets/assets/images/" + metaArray[2] + ".png"
+          document.querySelector(".rsImage").src = "/assets/assets/images/" + rsID + ".png"
           document.querySelector(".rsYr").innerHTML = "Year: " + metaArray[3]
           document.querySelector(".rsTags").innerHTML = "Keywords: " + metaArray[4]
           document.querySelector(".centerViewResPaper").style.display = "flex";

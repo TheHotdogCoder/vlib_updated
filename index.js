@@ -39,10 +39,7 @@ function sortVisible() {
 
 function getURLProp(identifier) {
     const link = window.location.toString()
-    res = link.slice(link.lastIndexOf('?' + identifier + '=') + 4, link.lastIndexOf('?' + identifier + '=') + 5)
-    if ((/^\d+$/).test(res) == false) {
-        res = 'NaN'
-    }
-    return res
+    res = link.slice(link.lastIndexOf('?' + identifier + '=') + 5,)
+    resFinal = res.replace("%20", " ")
+    return resFinal
 }
-
