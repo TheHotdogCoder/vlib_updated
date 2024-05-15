@@ -18,5 +18,8 @@ while ($stmt->fetch()) {
   array_push($titleArray, $title);
   array_push($tagsArray, $tags);
 }
+print_r($idArray);
+print_r($titleArray);
+print_r($tagsArray);
 $stmt->close();
 echo implode("___", $idArray) . ":::" . implode("---", $titleArray) . ":::" . implode("@@@", $tagsArray);
