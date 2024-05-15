@@ -19,4 +19,4 @@ while ($stmt->fetch()) {
   array_push($tagsArray, $tags);
 }
 $stmt->close();
-echo implode("---", $idArray), implode("---", $titleArray), implode("---", $tagsArray);
+echo implode("___", $idArray) . ":::" . implode("---", $titleArray) . ":::" . implode("@@@", $tagsArray);
