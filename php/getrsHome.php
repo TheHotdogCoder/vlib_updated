@@ -12,4 +12,4 @@ $stmt->store_result();
 $stmt->bind_result($id, $title, $tags);
 $stmt->fetch();
 $stmt->close();
-echo $id . ":::" . $title . ":::" . $tags;
+echo $id[0] . ":::" . $title . ":::" . $tags;
