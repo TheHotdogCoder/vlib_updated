@@ -12,6 +12,4 @@ $stmt->store_result();
 $stmt->bind_result($id, $title, $tags);
 $stmt->fetch();
 $stmt->close();
-$titleStr = implode("---", $title);
-$tagsStr = implode("@@@", $tags);
-echo $id . ":::" . $titleStr . ":::" . $tagsStr;
+echo $id . ":::" . $title . ":::" . $tags;
