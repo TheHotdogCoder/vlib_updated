@@ -121,6 +121,7 @@
       xhttp.onreadystatechange = function () {
         if (xhttp.readyState == XMLHttpRequest.DONE) {
           var metaArray = xhttp.responseText.split(":::")
+          alert(metaArray[0])
           alert(metaArray[1])
           alert(metaArray[2])
           var titleArray = metaArray[1].toString().split("---")
