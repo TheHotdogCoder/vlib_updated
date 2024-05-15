@@ -10,6 +10,13 @@ $stmt = $mysqli->prepare($sql);
 $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($id, $title, $tags);
-$stmt->fetch();
+$idArray = array();
+$titleArray = array();
+$tagsArray = array();
+while ($stmt->fetch()) {
+  array_push($idArray, $id);
+  array_push($titleArray, $title);
+  array_push($tagsArray, $tags);
+}
 $stmt->close();
-echo $id[0] . ":::" . $title . ":::" . $tags;
+echo implode("---", $idArray), implode("---", $titleArray), implode("---", $tagsArray);
