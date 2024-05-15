@@ -124,7 +124,7 @@
           alert(metaArray[0])
           alert(metaArray[1])
           alert(metaArray[2])
-          var titleArray = metaArray[0].toString().split("___")
+          var idArray = metaArray[0].toString().split("___")
           var titleArray = metaArray[1].toString().split("---")
           var tagArray = metaArray[2].toString().split("@@@")
           for (let id = 0; id < metaArray.length; id++) {
@@ -132,28 +132,28 @@
             tagArray.forEach(e => {
               linkFrame.classList.add(e)
             });
-            linkFrame.id = "aLink" + (id + 1)
-            linkFrame.href = "/rspapers/rspaper.html?id=" + (id + 1)
+            linkFrame.id = "aLink" + idArray[id]
+            linkFrame.href = "/rspapers/rspaper.html?id=" + idArray[id]
 
             const divFrame = document.createElement("div")
-            divFrame.id = "divLink" + (id + 1)
+            divFrame.id = "divLink" + idArray[id]
             divFrame.classList.add("resPaper")
 
             const imgFrame = document.createElement("div")
-            imgFrame.id = "imgLink" + (id + 1)
+            imgFrame.id = "imgLink" + idArray[id]
             imgFrame.classList.add("resImage")
 
             const rsImg = document.createElement("img")
-            imgFrame.src = "/assets/images/" + (id + 1) + ".png"
+            imgFrame.src = "/assets/images/" + idArray[id] + ".png"
 
             const rsTitleP = document.createElement("p")
             rsTitleP.innerHTML = titleArray[id]
 
             document.querySelector(".docs").appendChild(linkFrame)
-            document.querySelector("#aLink" + (id + 1)).appendChild(divFrame)
-            document.querySelector("divLink" + (id + 1)).appendChild(imgFrame)
-            document.querySelector("imgLink" + (id + 1)).appendChild(rsImg)
-            document.querySelector("divLink" + (id + 1)).appendChild(rsTitleP)
+            document.querySelector("#aLink" + idArray[id]).appendChild(divFrame)
+            document.querySelector("divLink" + idArray[id]).appendChild(imgFrame)
+            document.querySelector("imgLink" + idArray[id]).appendChild(rsImg)
+            document.querySelector("divLink" + idArray[id]).appendChild(rsTitleP)
           }
         }
       };
