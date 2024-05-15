@@ -121,8 +121,8 @@
       xhttp.onreadystatechange = function () {
         if (xhttp.readyState == XMLHttpRequest.DONE) {
           var metaArray = xhttp.responseText.split(":::")
-          var titleArray = metaArray[2].toString.split("---")
-          var tagArray = metaArray[3].toString.split("@@@")
+          var titleArray = metaArray[2].toString().split("---")
+          var tagArray = metaArray[3].toString().split("@@@")
           for (let id = 0; id < metaArray.length; id++) {
             const linkFrame = document.createElement("a")
             tagArray.forEach(e => {
